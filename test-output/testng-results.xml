@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="8" total="13" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-01T03:23:36 EET" name="Default suite" finished-at="2025-05-01T03:23:40 EET" duration-ms="3558">
+  <suite started-at="2025-05-02T02:22:09 EET" name="Default suite" finished-at="2025-05-02T02:22:16 EET" duration-ms="6694">
     <groups>
     </groups>
-    <test started-at="2025-05-01T03:23:36 EET" name="Default test" finished-at="2025-05-01T03:23:40 EET" duration-ms="3558">
+    <test started-at="2025-05-02T02:22:09 EET" name="Default test" finished-at="2025-05-02T02:22:16 EET" duration-ms="6694">
       <class name="AutomationFinalProject.AutomationFinalProject.AppTest">
-        <test-method is-config="true" signature="MySetup()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:36 EET" name="MySetup" finished-at="2025-05-01T03:23:39 EET" duration-ms="2937" status="PASS">
+        <test-method is-config="true" signature="MySetup()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:09 EET" name="MySetup" finished-at="2025-05-02T02:22:12 EET" duration-ms="3000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MySetup -->
-        <test-method signature="CheckWebsiteLanguage()[pri:1, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:39 EET" name="CheckWebsiteLanguage" finished-at="2025-05-01T03:23:40 EET" duration-ms="276" status="PASS">
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:12 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:13 EET" duration-ms="966" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckWebsiteLanguage -->
-        <test-method signature="CheckCurrency()[pri:2, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:40 EET" name="CheckCurrency" finished-at="2025-05-01T03:23:40 EET" duration-ms="86" status="PASS">
+        </test-method> <!-- ChangeWebsiteLanguage -->
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:13 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:14 EET" duration-ms="696" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckCurrency -->
-        <test-method signature="CheckContactNumber()[pri:3, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:40 EET" name="CheckContactNumber" finished-at="2025-05-01T03:23:40 EET" duration-ms="75" status="PASS">
+        </test-method> <!-- ChangeWebsiteLanguage -->
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:14 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:15 EET" duration-ms="691" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckContactNumber -->
-        <test-method signature="CheckQitafLogo()[pri:4, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:40 EET" name="CheckQitafLogo" finished-at="2025-05-01T03:23:40 EET" duration-ms="113" status="PASS">
+        </test-method> <!-- ChangeWebsiteLanguage -->
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:15 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:15 EET" duration-ms="601" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckQitafLogo -->
-        <test-method is-config="true" signature="MyAfterTest()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@23fb172e]" started-at="2025-05-01T03:23:40 EET" name="MyAfterTest" finished-at="2025-05-01T03:23:40 EET" duration-ms="1" status="PASS">
+        </test-method> <!-- ChangeWebsiteLanguage -->
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:15 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:16 EET" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeWebsiteLanguage -->
+        <test-method is-config="true" signature="MyAfterTest()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:16 EET" name="MyAfterTest" finished-at="2025-05-02T02:22:16 EET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MyAfterTest -->
