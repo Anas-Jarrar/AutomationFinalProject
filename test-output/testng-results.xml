@@ -1,37 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="13" passed="5" failed="0" skipped="0">
+<testng-results ignored="7" total="12" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-02T02:22:09 EET" name="Default suite" finished-at="2025-05-02T02:22:16 EET" duration-ms="6694">
+  <suite started-at="2025-05-05T03:53:20 EET" name="Default suite" finished-at="2025-05-05T03:54:40 EET" duration-ms="79571">
     <groups>
     </groups>
-    <test started-at="2025-05-02T02:22:09 EET" name="Default test" finished-at="2025-05-02T02:22:16 EET" duration-ms="6694">
+    <test started-at="2025-05-05T03:53:20 EET" name="Default test" finished-at="2025-05-05T03:54:40 EET" duration-ms="79571">
       <class name="AutomationFinalProject.AutomationFinalProject.AppTest">
-        <test-method is-config="true" signature="MySetup()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:09 EET" name="MySetup" finished-at="2025-05-02T02:22:12 EET" duration-ms="3000" status="PASS">
+        <test-method is-config="true" signature="MySetup()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:53:20 EET" name="MySetup" finished-at="2025-05-05T03:53:24 EET" duration-ms="3121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MySetup -->
-        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:12 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:13 EET" duration-ms="966" status="PASS">
+        <test-method signature="CheckWebsiteLanguage(java.lang.String)[pri:1, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:53:24 EET" name="CheckWebsiteLanguage" finished-at="2025-05-05T03:53:24 EET" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [CheckWebsiteLanguage] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [CheckWebsiteLanguage] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckWebsiteLanguage -->
+        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:53:24 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-05T03:53:25 EET" duration-ms="939" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeWebsiteLanguage -->
-        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:13 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:14 EET" duration-ms="696" status="PASS">
+        <test-method signature="RandomSelectCity()[pri:10, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:53:25 EET" name="RandomSelectCity" finished-at="2025-05-05T03:53:27 EET" duration-ms="2023" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeWebsiteLanguage -->
-        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:14 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:15 EET" duration-ms="691" status="PASS">
+        </test-method> <!-- RandomSelectCity -->
+        <test-method signature="RandomSelectRooms()[pri:11, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:53:27 EET" name="RandomSelectRooms" finished-at="2025-05-05T03:54:30 EET" duration-ms="63298" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeWebsiteLanguage -->
-        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:15 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:15 EET" duration-ms="601" status="PASS">
+        </test-method> <!-- RandomSelectRooms -->
+        <test-method signature="CheckTheResultsIsRetrived()[pri:12, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:54:30 EET" name="CheckTheResultsIsRetrived" finished-at="2025-05-05T03:54:40 EET" duration-ms="10103" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeWebsiteLanguage -->
-        <test-method signature="ChangeWebsiteLanguage()[pri:9, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:15 EET" name="ChangeWebsiteLanguage" finished-at="2025-05-02T02:22:16 EET" duration-ms="651" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeWebsiteLanguage -->
-        <test-method is-config="true" signature="MyAfterTest()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@2f17e30d]" started-at="2025-05-02T02:22:16 EET" name="MyAfterTest" finished-at="2025-05-02T02:22:16 EET" duration-ms="1" status="PASS">
+        </test-method> <!-- CheckTheResultsIsRetrived -->
+        <test-method is-config="true" signature="MyAfterTest()[pri:0, instance:AutomationFinalProject.AutomationFinalProject.AppTest@ebb6851]" started-at="2025-05-05T03:54:40 EET" name="MyAfterTest" finished-at="2025-05-05T03:54:40 EET" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MyAfterTest -->

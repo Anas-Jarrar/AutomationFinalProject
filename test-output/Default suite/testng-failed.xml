@@ -7,7 +7,7 @@
         <methods>
           <include name="MySetup"/>
           <include name="MyAfterTest"/>
-          <include name="ReturnDateCheck"/>
+          <include name="CheckWebsiteLanguage"/>
         </methods>
       </class> <!-- AutomationFinalProject.AutomationFinalProject.AppTest -->
     </classes>
