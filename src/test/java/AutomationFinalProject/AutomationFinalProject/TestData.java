@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class TestData {
 
@@ -36,15 +37,18 @@ public class TestData {
 	String[] ArCities = { "جدة", "دبي" };//Test(10)
 	int RandomArCityIndex = rand.nextInt(ArCities.length);//Test(10)
 	
-	String[] Values = { "A", "B" };//Test(11)
-	int RoomsRandomValue = rand.nextInt(Values.length);//Test(11)
+	public void CheckWebsiteLanguage(String ExpectedLanguage) {
+	    String ActualLanguage = driver.findElement(By.tagName("html")).getDomAttribute("lang");
+	    Assert.assertEquals(ActualLanguage, ExpectedLanguage);
+	}
+
 
 	public void Setup() {
 		driver.manage().window().maximize();
 		driver.get(TheWebSite);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		WebElement CountryButton = driver
-				.findElement(By.cssSelector(".sc-jTzLTM.cta__button.cta__saudi.btn.btn-primary"));
+				.findElement(By.id("mui-2"));
 		CountryButton.click();
 	}
 	

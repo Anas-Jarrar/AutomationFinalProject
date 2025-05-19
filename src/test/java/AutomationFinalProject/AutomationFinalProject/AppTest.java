@@ -1,15 +1,12 @@
 package AutomationFinalProject.AutomationFinalProject;
 
+
 import java.time.Duration;
-import java.time.LocalDate;
-import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,68 +18,64 @@ public class AppTest extends TestData {
 	public void MySetup() {
 		Setup();
 	}
-
-	@Test(priority = 1, enabled = false)
-	public void CheckWebsiteLanguage(String ExpectedLanguage) {
-		String ActualLanguage = driver.findElement(By.tagName("html")).getDomAttribute("Lang");
-		Assert.assertEquals(ActualLanguage, ExpectedLanguage);
-
+	
+	@Test(priority = 1, enabled = true)
+	public void TestHomePageLanguage() {
+		CheckWebsiteLanguage("en");
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void CheckCurrency() {
 		// we can use cssSelector also
-		String ActualCurrency = driver.findElement(By.xpath("//button[@data-testid='Header__CurrencySelector']"))
+		String ActualCurrency = driver.findElement(By.cssSelector(".__ds__comp.undefined.MuiBox-root.alm-desktop-qioz0f"))
 				.getText();
 		Assert.assertEquals(ActualCurrency, ExpectedCurrency);
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void CheckContactNumber() {
-		String ActulContacteNum = driver.findElement(By.linkText("+966554400000")).getText();
+		String ActulContacteNum = driver.findElement(By.cssSelector(".__ds__comp.undefined.MuiBox-root.alm-desktop-h0bow9")).getText();
 		Assert.assertEquals(ActulContacteNum, ExpectedContacteNum);
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void CheckQitafLogo() {
 		WebElement TheFotter = driver.findElement(By.tagName("footer"));
-		boolean ActualLogoDisplayed = TheFotter.findElement(By.cssSelector(".sc-ekulBa.iOOTo"))
-				.findElement(By.cssSelector(".sc-bdVaJa.bxRSiR.sc-lcpuFF.jipXfR")).isDisplayed();
+		boolean ActualLogoDisplayed = TheFotter.findElement(By.cssSelector(".alm-desktop-1mqexmc-acceptedCards"))
+				.findElement(By.xpath("//img[@alt='qitaf']")).isDisplayed();
 		Assert.assertEquals(ActualLogoDisplayed, true);
 
 	}
 
-	@Test(priority = 5, enabled = false)
-	public void StaysTabIsNotSelectedByDefault() throws InterruptedException {
+	@Test(priority = 5, enabled = true)
+	public void HotelTabIsNotSelected1() throws InterruptedException {
 		Thread.sleep(2000);
 		String currentURL = driver.getCurrentUrl();
 		boolean isHotelsSelected = currentURL.contains("hotels-home");
 		Assert.assertFalse(isHotelsSelected);
 	}
 
-	@Test(priority = 6, enabled = false)
-	public void WelcomPageTapSelectedCheck() {
-		WebElement StayTap = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+	@Test(priority = 6, enabled = true)
+	public void HotelTabIsNotSelected() {
+		WebElement StayTap = driver.findElement(By.id("tab-hotels"));
 		String ActualValue = StayTap.getDomAttribute("aria-selected");
 		Assert.assertEquals(ActualValue, ExpectedValue);
 	}
 
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 7, enabled = true)
 	public void DepartureDateCheck() {
-		WebElement DepartureDateField = driver.findElement(By.cssSelector(".sc-bYnzgO.sc-cPuPxo.jNskcH"));
-		String ActualDepartureDay = DepartureDateField.findElement(By.cssSelector(".sc-dXfzlN.iPVuSG")).getText();
-		String ActualDepartureMonth = DepartureDateField.findElement(By.cssSelector(".sc-eSePXt.ljMnJa")).getText();
+		WebElement DepartureDateField = driver.findElement(By.id("testIdPickerPrefix__DatePicker__DepartureDate"));
+		String ActualDepartureDate = DepartureDateField.getDomAttribute("value");
+		String ActualDepartureDay=ActualDepartureDate.split(",")[1].trim().split(" ")[0];
 		Assert.assertEquals(ActualDepartureDay, FormatedTomorrowDate);
-		Assert.assertEquals(ActualDepartureMonth.toUpperCase(), TomorrowDate.getMonth().toString());
 	}
 
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 8, enabled = true)
 	public void ReturnDateCheck() {
-		WebElement ReturnDateField = driver.findElement(By.cssSelector(".sc-bYnzgO.sc-hvvHee.aiGEY"));
-		String ActualReturnDay = ReturnDateField.findElement(By.cssSelector(".sc-dXfzlN.iPVuSG")).getText();
-		String ActualReturnMonth = ReturnDateField.findElement(By.cssSelector(".sc-eSePXt.ljMnJa")).getText();
+		WebElement ReturnDateField = driver.findElement(By.id("testIdPickerPrefix__DatePicker__ArrivalDate"));
+		String ActualReturnDate = ReturnDateField.getDomAttribute("value");
+		String ActualReturnDay=ActualReturnDate.split(",")[1].trim().split(" ")[0];		
 		Assert.assertEquals(ActualReturnDay, FormatedAfterTomorrowDate);
-		Assert.assertEquals(ActualReturnMonth.toUpperCase(), AfterTomorrowDate.getMonth().toString());
 	}
 
 	@Test(priority = 9, enabled = true)
@@ -97,40 +90,37 @@ public class AppTest extends TestData {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 10,enabled=true)
 	public void RandomSelectCity() {
-		WebElement StaysButton = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		WebElement StaysButton = driver.findElement(By.id("tab-hotels"));
 		StaysButton.click();
 		String CurrentUrl = driver.getCurrentUrl();
-		WebElement SearchBar = driver.findElement(By.cssSelector(".sc-phbroq-2.uQFRS.AutoComplete__Input"));
+		WebElement SearchBar = driver.findElement(By.id("DesktopSearchWidget_Destination_InputField_Test_Id"));
 		if (CurrentUrl.contains("en")) {
 			SearchBar.sendKeys(EnCities[RandomEnCityIndex]);
 		} else {
 			SearchBar.sendKeys(ArCities[RandomArCityIndex]);
 		}
-
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mui-4"))).click();
+//		driver.findElement(By.id("mui-4")).click();
 	}
-
-	@Test(priority = 11)
-	public void RandomSelectRooms() {
-		WebElement ReservationRoomSelect = driver.findElement(By.cssSelector(".sc-tln3e3-1.gvrkTi"));
-		Select Myselect = new Select(ReservationRoomSelect);
-		Myselect.selectByValue(Values[RoomsRandomValue]);
-		driver.findElement(By.cssSelector(".sc-1vkdpp9-5.btwWVk")).click();
-	}
-
-	@Test(priority = 12)
-	public void CheckTheResultsIsRetrived() throws InterruptedException {
-		Thread.sleep(10000);
-		String CurrentUrl = driver.getCurrentUrl();
-		String Results = driver.findElement(By.xpath("//span[@data-testid='srp_properties_found']")).getText();
-		if (CurrentUrl.contains("en")) {
-			Assert.assertEquals(Results.contains("found"), true);
-		} else {
-			Assert.assertEquals(Results.contains("إقامة"), true);
+	@Test(priority=11,enabled=true)
+	public void WaitLoadingBar() throws InterruptedException {
+		Thread.sleep(20000);
+		String FoundWord=driver.findElement(By.xpath("//span[@data-testid='srp_properties_found']")).getText();
+		String CurrentUrl=driver.getCurrentUrl();
+		if(driver.getCurrentUrl().contains("en")) {
+			Assert.assertEquals(FoundWord.contains("found"), true);
 		}
+		else
+		{
+			Assert.assertEquals(FoundWord.contains("إقامة"), true);
+
+		}		
 	}
 
+	
 	@AfterTest
 	public void MyAfterTest() {
 
